@@ -9,21 +9,40 @@
 </head>
 <body>
   <script type="text/x-handlebars">
+
     <div class="header">
       <div>HR<b>21</b></div>
     </div>
 
-    {{outlet}}
+    <div class="middle">
+      {{outlet}}
+    </div>
+      
   </script>
 
   <script type="text/x-handlebars" id="index">
-    <div class="middle">
+  
       {{#each item in model}}
-        <div class="person-container">
+        {{#link-to 'profile' class="person-container"}}
           <img {{bind-attr src="item.image"}}/>
-        </div>
+        {{/link-to}}
       {{/each}}
+
+  </script>
+
+  <script type="text/x-handlebars" id="profile">
+
+    <div class="profile-left">
+      <div class="profile-picture">
+        <img {{bind-attr src="image"}} />
+      </div>
     </div>
+
+    <div class="profile-right">
+      <div class="profile-name">{{firstName}} <b>{{lastName}}</b></div>
+
+    </div>
+
   </script>
 
   <script src="js/libs/jquery-1.10.2.js"></script>

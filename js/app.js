@@ -1,7 +1,7 @@
 App = Ember.Application.create();
 
 App.Router.map(function() {
-  // put your routes here
+  this.route("profile", { path: "/profile" });
 });
 
 App.IndexRoute = Ember.Route.extend({
@@ -16,4 +16,15 @@ App.IndexRoute = Ember.Route.extend({
   	}
     return array;
   },
+});
+
+App.ProfileRoute = Ember.Route.extend({
+  model: function() {
+    return {
+      id : "123",
+      firstName : "Loring",
+      lastName : "Dodge",
+      image : "images/alexzai.jpg"
+    }
+  }
 });
