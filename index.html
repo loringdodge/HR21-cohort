@@ -20,28 +20,32 @@
       
   </script>
 
-  <script type="text/x-handlebars" id="index">
-  
-      {{#each item in model}}
+  <script type="text/x-handlebars" id="index" data-template-name="index">
+      <div class="title-name">{{firstName}} &nbsp<b>{{lastName}}</b></div>
+      {{#each person in model}}
+        <span {{action "nameShow" person.firstName person.lastName on="mouseEnter"}}>
         {{#link-to 'profile' class="person-container"}}
-          <img {{bind-attr src="item.image"}}/>
+          <img {{bind-attr src="person.image"}}/>
         {{/link-to}}
+        </span>
       {{/each}}
 
   </script>
 
   <script type="text/x-handlebars" id="profile">
-
-    <div class="profile-left">
-      <div class="profile-picture">
-        <img {{bind-attr src="image"}} />
+    <div class="profile-centering">
+      <div class="title-name">&nbsp</div>
+      <div class="profile-left">
+        <div class="profile-picture">
+          <img {{bind-attr src="image"}} />
+        </div>
       </div>
-    </div>
 
-    <div class="profile-right">
-      <div class="profile-name">{{firstName}} <b>{{lastName}}</b></div>
-
-    </div>
+      <div class="profile-right">
+        <div class="profile-name">{{firstName}} <b>{{lastName}}</b></div>
+        <div class="profile-bio">{{bio}}</div>
+      </div>
+    </div>  
 
   </script>
 

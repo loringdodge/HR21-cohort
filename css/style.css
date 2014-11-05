@@ -4,12 +4,12 @@
 }
 
 html, body {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-	background-color: #E74747;
+  background-color: #E74747;
 }
 
 .header {
@@ -31,8 +31,15 @@ body {
 }
 
 .middle {
-	margin: 70px auto;
-	width: 900px;
+	margin: 0px auto;
+	width: 70%;
+}
+
+.title-name {
+  margin: 30px 0px 30px 0px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  text-align:center;
 }
 
 .person-container {
@@ -61,6 +68,11 @@ body {
 	border-radius:3px;
 }
 
+.profile-centering {
+  margin: 0 auto;
+  max-width:850px;
+}
+
 .profile-left {
   float:left;
   width:300px;
@@ -68,7 +80,7 @@ body {
 
 .profile-right {
   float:left;
-  width:600px;
+  width:60%;
   -webkit-animation: slide-show 1s forwards;
   -moz-animation: slide-show 1s forwards;
   -o-animation: slide-show 1s forwards;
@@ -97,7 +109,14 @@ body {
 }
 
 .profile-name {
+  margin-bottom: 20px;
   font-size: 40px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.profile-bio {
+  width: 80%;
+  font-size: 18px;
   font-family: 'Josefin Sans', sans-serif;
 }
 
