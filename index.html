@@ -24,7 +24,7 @@
       <div class="title-name">{{firstName}} &nbsp<b>{{lastName}}</b></div>
       {{#each person in model}}
         <span {{action "nameShow" person.firstName person.lastName on="mouseEnter"}}>
-        {{#link-to 'profile' class="person-container"}}
+        {{#link-to 'profile' person.id class="person-container"}}
           <img {{bind-attr src="person.image"}}/>
         {{/link-to}}
         </span>
@@ -37,13 +37,14 @@
       <div class="title-name">&nbsp</div>
       <div class="profile-left">
         <div class="profile-picture">
-          <img {{bind-attr src="image"}} />
+          <img {{bind-attr src="people.image"}} />
         </div>
       </div>
 
       <div class="profile-right">
-        <div class="profile-name">{{firstName}} <b>{{lastName}}</b></div>
-        <div class="profile-bio">{{bio}}</div>
+        <div class="profile-name">{{people.firstName}} <b>{{people.lastName}}</b></div>
+        <div class="profile-bio">{{people.bio}}</div>
+        <div class="profile-company">{{github.company}}</div>
       </div>
     </div>  
 

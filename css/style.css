@@ -32,7 +32,7 @@ body {
 
 .middle {
 	margin: 0px auto;
-	width: 70%;
+	width: 870px;
 }
 
 .title-name {
@@ -80,7 +80,7 @@ body {
 
 .profile-right {
   float:left;
-  width:60%;
+  width:550px;
   -webkit-animation: slide-show 1s forwards;
   -moz-animation: slide-show 1s forwards;
   -o-animation: slide-show 1s forwards;
